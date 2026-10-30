@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/nova-motion-hero.svg" alt="NOVA MOTION — Local AI Video Studio" width="100%"/>
+<img src="docs/assets/nova-motion-loop.gif" alt="Animated NOVA MOTION — Local AI Video Studio" width="100%"/>
 
 # NOVA MOTION
 
@@ -21,6 +21,13 @@ A Windows-first, local AI video studio powered by **ComfyUI · AnimateDiff · St
   <img src="https://img.shields.io/badge/FastAPI-Local%20API-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
   <img src="https://img.shields.io/badge/Inference-NVIDIA%20CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="NVIDIA CUDA"/>
 </p>
+<p align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=computerengineer1.NOVA-MOTION&left_text=README%20VIEWS&left_color=%23111827&right_color=%238B5CF6&logo=github" alt="Approximate README page views"/>
+  <img src="https://img.shields.io/github/issues/computerengineer1/NOVA-MOTION?style=for-the-badge&label=OPEN%20ISSUES&color=F59E0B" alt="Open issues"/>
+  <img src="https://img.shields.io/github/last-commit/computerengineer1/NOVA-MOTION?style=for-the-badge&label=LATEST%20UPDATE&color=22C55E" alt="Latest commit"/>
+  <img src="https://img.shields.io/github/commit-activity/y/computerengineer1/NOVA-MOTION?style=for-the-badge&label=COMMITS%20%2F%20YEAR&color=06B6D4" alt="Commit activity over the past year"/>
+  <img src="https://img.shields.io/github/actions/workflow/status/computerengineer1/NOVA-MOTION/readme-motion.yml?branch=main&style=for-the-badge&label=README%20MOTION" alt="Animated README banner workflow"/>
+</p>
 
 [Quick start](#-get-started) · [Features](#-what-you-get) · [Architecture](#-how-it-works) · [Compatibility](#-hardware--realistic-expectations) · [Docs](#-documentation)
 
@@ -38,6 +45,13 @@ NOVA MOTION is a **local video-generation workstation**, not a hosted website or
 - **The limitations are visible.** Interpolation, conventional resizing and multi-shot assembly are identified rather than presented as new AI-generated detail.
 
 > **Important distinction:** the one-time installer and model manager need internet access to download dependencies and model weights. After those files are installed, the generation workflow is designed to run locally without a cloud inference account. The application does not include built-in user accounts, subscriptions or telemetry.
+
+
+## 🌐 Live project pulse
+
+The badges above refresh from GitHub and the visitor-counter service. The README views number is an **approximate page-load count**, not a count of unique people; it is provided by an external counter and may be affected by image caching.
+
+Want to help shape the next build? Open a bug report, suggest an improvement, or share a render in the community section below. The repository's actual traffic analytics are also available to maintainers under **Insights → Traffic**.
 
 ## A look inside the studio
 
@@ -222,6 +236,7 @@ GitHub Actions runs the backend tests and frontend typecheck, test suite and pro
 - [Troubleshooting](docs/TROUBLESHOOTING.md) — diagnostics, error codes and recovery steps.
 - [Third-party licenses](docs/LICENSES.md) — model, runtime and component license information.
 - [Changelog](CHANGELOG.md) — release history.
+- [Contributing](CONTRIBUTING.md) — how to report, discuss and submit changes.
 - [MIT License](LICENSE) — license for this repository's application code.
 
 ## 🔒 Privacy, security & boundaries
@@ -235,6 +250,19 @@ GitHub Actions runs the backend tests and frontend typecheck, test suite and pro
 
 NOVA MOTION is an experimental local creator tool, not a guarantee of professional video quality or compatibility with every NVIDIA GPU. Always check the live readiness report and the model's license before generating.
 
+## 🤝 Join the NOVA MOTION community
+
+This project gets better when creators and developers take part. Choose the kind of contribution that fits you:
+
+| Join in | Open the right GitHub form |
+|---|---|
+| 🐛 Found a bug? | [Create a bug report](https://github.com/computerengineer1/NOVA-MOTION/issues/new?template=bug_report.yml) |
+| 💡 Have an idea? | [Suggest a feature](https://github.com/computerengineer1/NOVA-MOTION/issues/new?template=feature_request.yml) |
+| 🎬 Made something with NOVA MOTION? | [Share your showcase](https://github.com/computerengineer1/NOVA-MOTION/issues/new?template=showcase.yml) |
+| 🧑‍💻 Want to contribute code? | [Read the contribution guide](CONTRIBUTING.md) |
+
+Pull requests are welcome. Please keep model weights, generated videos, private logs and machine-specific secrets out of commits.
+
 ## ⭐ Like the project?
 
 If NOVA MOTION is useful to you, consider giving the repository a **Star**. Bug reports, reproducible issues and thoughtful contributions are welcome:
@@ -245,4 +273,5 @@ If NOVA MOTION is useful to you, consider giving the repository a **Star**. Bug 
 
 <div align="center">
   <sub>Built for creators who want local control over their AI video workflow.</sub>
+  <sub>Motion banner is generated from original artwork by <code>scripts/generate_readme_animation.py</code>.</sub>
 </div>
