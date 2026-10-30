@@ -11,23 +11,19 @@ Thanks for helping make NOVA MOTION better.
 
 ## Local development checks
 
-Backend:
+Backend (run from the repository root):
 
-\`\`\`powershell
-cd backend
-python -m pip install -r requirements.txt -r requirements-dev.txt
-python -m pytest -q
-\`\`\`
+    cd backend
+    python -m pip install -r requirements.txt -r requirements-dev.txt
+    python -m pytest -q
 
 Frontend:
 
-\`\`\`powershell
-cd frontend
-npm ci
-npm run typecheck
-npm test
-npm run build
-\`\`\`
+    cd frontend
+    npm ci
+    npm run typecheck
+    npm test
+    npm run build
 
 ## Keep the repository healthy
 
