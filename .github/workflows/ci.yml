@@ -72,7 +72,7 @@ jobs:
 
       - name: Run frontend tests
         working-directory: frontend
-        run: npm test -- --pool=threads --maxWorkers=1 --minWorkers=1
+        run: npm test -- --pool=threads --maxWorkers=1
 
       - name: Build production UI
         working-directory: frontend
