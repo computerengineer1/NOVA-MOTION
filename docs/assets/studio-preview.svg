@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="20" x2="1190" y2="740" gradientUnits="userSpaceOnUse"><stop stop-color="#111827"/><stop offset="1" stop-color="#080C14"/></linearGradient>
+    <linearGradient id="screen" x1="650" y1="130" x2="1130" y2="550" gradientUnits="userSpaceOnUse"><stop stop-color="#25385A"/><stop offset=".5" stop-color="#22314F"/><stop offset="1" stop-color="#111D32"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#54B7FF"/><stop offset="1" stop-color="#9D75FF"/></linearGradient>
+    <linearGradient id="btn" x1="210" y1="480" x2="600" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#377DE8"/><stop offset="1" stop-color="#7958E8"/></linearGradient>
+    <clipPath id="video"><rect x="688" y="174" width="520" height="306" rx="13"/></clipPath>
+  </defs>
+  <rect width="1280" height="760" rx="26" fill="url(#bg)"/>
+  <rect x="18" y="18" width="1244" height="724" rx="18" stroke="#6E8AB8" stroke-opacity=".22"/>
+  <rect x="18" y="18" width="1244" height="54" rx="18" fill="#0D1421"/>
+  <path d="M18 72H1262" stroke="#26354F"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect x="38" y="29" width="31" height="31" rx="9" fill="#172C4A" stroke="#4D91DF"/>
+    <path d="M47 50V39L59 50V39" stroke="#8CC8FF" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="80" y="42" font-size="13" font-weight="800" fill="#EDF4FF" letter-spacing=".7">NOVA MOTION</text>
+    <text x="80" y="56" font-size="8" fill="#7E94B9" letter-spacing="1.2">LOCAL AI VIDEO STUDIO</text>
+    <rect x="1040" y="31" width="194" height="27" rx="13.5" fill="#10291F" stroke="#286E58"/>
+    <circle cx="1057" cy="44.5" r="4" fill="#49D8A2"/>
+    <text x="1070" y="48" font-size="10" font-weight="700" fill="#B9FFE2">SYSTEM READY</text>
+    <rect x="18" y="72" width="196" height="670" fill="#0C121E"/>
+    <path d="M214 72V742" stroke="#26354F"/>
+    <g fill="#899DBE" font-size="12">
+      <text x="42" y="111" font-size="9" font-weight="700" letter-spacing="1.7" fill="#5F7394">WORKSPACE</text>
+      <rect x="31" y="128" width="170" height="38" rx="9" fill="#182A49" stroke="#2C5792"/>
+      <rect x="44" y="140" width="12" height="13" rx="3" fill="#5EA8F5"/>
+      <text x="66" y="153" fill="#CDE5FF" font-weight="700">Studio</text>
+      <rect x="44" y="183" width="13" height="12" rx="3" stroke="#7186A8"/>
+      <text x="66" y="194">My Videos</text>
+      <rect x="44" y="224" width="13" height="12" rx="3" stroke="#7186A8"/>
+      <text x="66" y="235">Models</text>
+      <rect x="44" y="265" width="13" height="12" rx="3" stroke="#7186A8"/>
+      <text x="66" y="276">System</text>
+      <rect x="44" y="306" width="13" height="12" rx="3" stroke="#7186A8"/>
+      <text x="66" y="317">Settings</text>
+      <rect x="44" y="347" width="13" height="12" rx="3" stroke="#7186A8"/>
+      <text x="66" y="358">Help &amp; Diagnostics</text>
+    </g>
+    <rect x="34" y="663" width="163" height="58" rx="10" fill="#111D30" stroke="#273A59"/>
+    <circle cx="50" cy="682" r="4" fill="#52D4B0"/>
+    <text x="62" y="686" font-size="10" font-weight="700" fill="#BDE9DB">100% LOCAL</text>
+    <text x="46" y="705" font-size="9" fill="#7387A8">Private by design</text>
+    <text x="248" y="118" font-size="11" font-weight="700" letter-spacing="2" fill="#80A5D5">CREATE SOMETHING IN MOTION</text>
+    <text x="246" y="153" font-size="28" font-weight="800" fill="#F0F5FF">Studio</text>
+    <text x="248" y="175" font-size="12" fill="#889BB9">Describe a scene. Shape the output. Generate locally.</text>
+    <rect x="245" y="198" width="404" height="321" rx="15" fill="#111A29" stroke="#2A3A56"/>
+    <text x="265" y="230" font-size="13" font-weight="700" fill="#E3ECFA">Your prompt</text>
+    <rect x="264" y="246" width="366" height="126" rx="9" fill="#0A111D" stroke="#30425F"/>
+    <text x="280" y="272" font-size="11" fill="#C1D0E7">A sweeping cinematic shot of a luminous</text>
+    <text x="280" y="291" font-size="11" fill="#C1D0E7">coastline at blue hour, ocean mist, distant</text>
+    <text x="280" y="310" font-size="11" fill="#C1D0E7">mountains, subtle camera movement...</text>
+    <text x="280" y="350" font-size="9" fill="#6F84A8">EXAMPLE TEXT ONLY · PROMPT IS EDITABLE IN THE APP</text>
+    <rect x="264" y="388" width="366" height="35" rx="8" fill="#16233B" stroke="#2D4267"/>
+    <text x="279" y="410" font-size="10" fill="#AFC2E0">Negative prompt · blurry, artifacts, watermark...</text>
+    <rect x="264" y="438" width="105" height="31" rx="8" fill="#1D2940" stroke="#425B83"/>
+    <text x="281" y="458" font-size="10" fill="#C5D8F4">Enhance prompt</text>
+    <rect x="378" y="438" width="83" height="31" rx="8" fill="#1D2940" stroke="#425B83"/>
+    <text x="396" y="458" font-size="10" fill="#C5D8F4">Examples</text>
+    <rect x="470" y="438" width="160" height="31" rx="8" fill="#172944"/>
+    <text x="486" y="458" font-size="10" fill="#9EB7DB">Random seed · enabled</text>
+    <rect x="264" y="482" width="366" height="25" rx="7" fill="url(#btn)"/>
+    <text x="379" y="499" font-size="11" font-weight="800" fill="white">GENERATE 8-SECOND VIDEO</text>
+    <rect x="669" y="198" width="553" height="321" rx="15" fill="#111A29" stroke="#2A3A56"/>
+    <text x="690" y="230" font-size="13" font-weight="700" fill="#E3ECFA">Output preview</text>
+    <rect x="688" y="174" width="520" height="306" rx="13" fill="url(#screen)" opacity="0"/>
+    <g clip-path="url(#video)">
+      <rect x="688" y="174" width="520" height="306" fill="url(#screen)"/>
+      <circle cx="1020" cy="265" r="76" fill="#80B8FF" opacity=".14"/>
+      <path d="M688 368L800 287L870 338L965 250L1055 325L1134 245L1208 294V480H688V368Z" fill="#304C74"/>
+      <path d="M688 402L809 340L893 380L1000 315L1090 369L1170 327L1208 351V480H688V402Z" fill="#172E4A"/>
+      <path d="M688 432L825 392L910 422L1010 378L1116 427L1208 392V480H688V432Z" fill="#101B2C"/>
+      <path d="M790 480C858 444 912 454 968 422C1032 385 1087 425 1160 386" stroke="#5BB7D8" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+      <circle cx="1084" cy="257" r="30" fill="#B8E8FF" opacity=".45"/>
+      <rect x="704" y="190" width="105" height="23" rx="11.5" fill="#07101F" fill-opacity=".7"/>
+      <circle cx="718" cy="201.5" r="3.5" fill="#53D5B2"/>
+      <text x="730" y="205" font-size="8" fill="#E1F4FF" font-weight="700" letter-spacing=".8">PREVIEW FRAME</text>
+    </g>
+    <rect x="688" y="174" width="520" height="306" rx="13" stroke="#7FA6D6" stroke-opacity=".36"/>
+    <rect x="690" y="491" width="518" height="17" rx="8.5" fill="#0B1320"/>
+    <rect x="700" y="497" width="498" height="5" rx="2.5" fill="#263753"/>
+    <rect x="700" y="497" width="183" height="5" rx="2.5" fill="url(#accent)"/>
+    <circle cx="883" cy="499.5" r="4" fill="#E4F2FF" stroke="#4D9DF4"/>
+    <text x="247" y="566" font-size="13" font-weight="700" fill="#E3ECFA">Generation settings</text>
+    <g>
+      <rect x="245" y="582" width="977" height="103" rx="15" fill="#111A29" stroke="#2A3A56"/>
+      <text x="268" y="610" font-size="10" fill="#8197BA">DURATION</text><text x="268" y="640" font-size="15" font-weight="700" fill="#E5EEFC">8 seconds</text>
+      <text x="438" y="610" font-size="10" fill="#8197BA">ASPECT RATIO</text><text x="438" y="640" font-size="15" font-weight="700" fill="#E5EEFC">16:9</text>
+      <text x="615" y="610" font-size="10" fill="#8197BA">NATIVE FRAME RATE</text><text x="615" y="640" font-size="15" font-weight="700" fill="#E5EEFC">8 fps</text>
+      <text x="812" y="610" font-size="10" fill="#8197BA">MODEL</text><text x="812" y="640" font-size="15" font-weight="700" fill="#E5EEFC">AnimateDiff + SD 1.5</text>
+      <text x="1053" y="610" font-size="10" fill="#8197BA">EXECUTION</text><text x="1053" y="640" font-size="15" font-weight="700" fill="#60D9BB">LOCAL</text>
+      <path d="M410 598V667M588 598V667M785 598V667M1027 598V667" stroke="#283A57"/>
+    </g>
+    <text x="248" y="714" font-size="10" fill="#6F84A8">CONCEPT ILLUSTRATION · NOT A CAPTURE OF THE RUNNING APPLICATION</text>
+  </g>
+</svg>
