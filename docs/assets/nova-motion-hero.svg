@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="620" viewBox="0 0 1440 620" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="70" y1="30" x2="1330" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#080D19"/><stop offset=".52" stop-color="#10172A"/><stop offset="1" stop-color="#17102A"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="720" y1="150" x2="1370" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#55B7FF"/><stop offset=".5" stop-color="#766BFF"/><stop offset="1" stop-color="#C46BFF"/>
+    </linearGradient>
+    <linearGradient id="aurora" x1="810" y1="245" x2="1330" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#25D7D0"/><stop offset=".5" stop-color="#537DFF"/><stop offset="1" stop-color="#AA70FF"/>
+    </linearGradient>
+    <linearGradient id="land" x1="1045" y1="320" x2="1045" y2="492" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#263D66"/><stop offset="1" stop-color="#101A31"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="760" y1="115" x2="1358" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B2A48" stop-opacity=".82"/><stop offset="1" stop-color="#101629" stop-opacity=".94"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="0" cy="0" r="1" gradientTransform="matrix(220 0 0 220 1150 210)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4A9FFF" stop-opacity=".36"/><stop offset="1" stop-color="#4A9FFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="650" y="40" width="840" height="600" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" stroke="#86A5DD" stroke-opacity=".075" stroke-width="1"/>
+    </pattern>
+    <clipPath id="screen"><rect x="744" y="104" width="624" height="390" rx="24"/></clipPath>
+  </defs>
+  <rect width="1440" height="620" rx="28" fill="url(#bg)"/>
+  <rect width="1440" height="620" rx="28" fill="url(#grid)"/>
+  <circle cx="1150" cy="210" r="220" fill="url(#orb)"/>
+  <path d="M0 510C210 458 356 562 535 498C675 448 790 480 940 620H0V510Z" fill="#13203A" opacity=".6"/>
+  <path d="M0 0H1440V620H0Z" stroke="#7897CD" stroke-opacity=".16" stroke-width="2"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect x="82" y="88" width="228" height="34" rx="17" fill="#172743" stroke="#4A82D8" stroke-opacity=".5"/>
+    <circle cx="102" cy="105" r="5" fill="#59D8CD"/>
+    <text x="117" y="110" fill="#B5D6FF" font-size="13" font-weight="700" letter-spacing="2.2">LOCAL AI VIDEO STUDIO</text>
+    <text x="78" y="235" fill="#F5F8FF" font-size="88" font-weight="800" letter-spacing="-4">NOVA</text>
+    <text x="78" y="326" fill="url(#blue)" font-size="88" font-weight="800" letter-spacing="-4">MOTION</text>
+    <text x="84" y="377" fill="#B7C5DE" font-size="23" font-weight="500">From a sentence to a cinematic sequence.</text>
+    <text x="84" y="414" fill="#8193B3" font-size="17">Your prompts. Your models. Your machine.</text>
+    <g transform="translate(84 458)">
+      <rect width="142" height="39" rx="19.5" fill="#162A48" stroke="#3D8EEB" stroke-opacity=".55"/>
+      <path d="M19 14L29 19.5L19 25V14Z" fill="#78B9FF"/>
+      <text x="40" y="25" fill="#DCEBFF" font-size="13" font-weight="700">TEXT TO VIDEO</text>
+      <rect x="154" width="132" height="39" rx="19.5" fill="#211D3E" stroke="#8C74F0" stroke-opacity=".55"/>
+      <path d="M173 12V27M168 17L173 12L178 17" stroke="#BBA6FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="188" y="25" fill="#E5DDFF" font-size="13" font-weight="700">LOCAL FIRST</text>
+      <rect x="298" width="116" height="39" rx="19.5" fill="#142B2C" stroke="#3DBEAA" stroke-opacity=".5"/>
+      <circle cx="317" cy="19.5" r="5" fill="#53D6B7"/>
+      <text x="331" y="25" fill="#D3FFF3" font-size="13" font-weight="700">NO CLOUD</text>
+    </g>
+    <text x="84" y="558" fill="#617493" font-size="12" letter-spacing="2.2">WINDOWS 11  ·  NVIDIA CUDA  ·  COMFYUI + ANIMATEDIFF</text>
+  </g>
+  <g filter="url(#glow)" opacity=".55">
+    <path d="M820 350C890 260 1010 240 1110 300C1190 350 1290 302 1385 225" stroke="url(#aurora)" stroke-width="42" stroke-linecap="round"/>
+  </g>
+  <g clip-path="url(#screen)">
+    <rect x="744" y="104" width="624" height="390" fill="url(#glass)"/>
+    <rect x="744" y="104" width="624" height="390" fill="url(#grid)" opacity=".45"/>
+    <circle cx="1123" cy="260" r="146" fill="#3166B7" opacity=".2" filter="url(#soft)"/>
+    <circle cx="1195" cy="238" r="74" fill="#99D9FF" opacity=".12"/>
+    <circle cx="1195" cy="238" r="47" fill="#DDF5FF" opacity=".2"/>
+    <path d="M744 375L860 300L933 344L1040 248L1122 320L1235 226L1368 316V494H744V375Z" fill="#1D3152"/>
+    <path d="M744 405L854 343L948 376L1058 303L1154 365L1252 291L1368 348V494H744V405Z" fill="url(#land)"/>
+    <path d="M744 432L900 386L1010 420L1116 365L1246 419L1368 375V494H744V432Z" fill="#10182C"/>
+    <path d="M942 494C1002 453 1052 443 1101 420C1152 395 1202 407 1255 385" stroke="url(#aurora)" stroke-width="4" stroke-linecap="round" opacity=".92"/>
+    <path d="M951 494C1027 453 1051 470 1121 435C1191 400 1230 432 1293 397" stroke="#5FC8E8" stroke-opacity=".25" stroke-width="16" filter="url(#soft)"/>
+    <path d="M790 155H1320" stroke="#C7D7FA" stroke-opacity=".17"/>
+    <g font-family="Inter,Segoe UI,Arial,sans-serif">
+      <rect x="770" y="128" width="172" height="27" rx="13.5" fill="#0C1424" fill-opacity=".72" stroke="#8BA6D0" stroke-opacity=".25"/>
+      <circle cx="787" cy="141.5" r="4" fill="#56D5B5"/>
+      <text x="800" y="146" fill="#D8E7FF" font-size="10" font-weight="700" letter-spacing="1.4">GENERATED FRAME</text>
+      <rect x="1264" y="128" width="78" height="27" rx="13.5" fill="#0C1424" fill-opacity=".72" stroke="#8BA6D0" stroke-opacity=".25"/>
+      <text x="1281" y="146" fill="#D8E7FF" font-size="10" font-weight="700">16:9</text>
+      <rect x="770" y="452" width="570" height="24" rx="12" fill="#08101E" fill-opacity=".8"/>
+      <g fill="#8BA3C9">
+        <rect x="782" y="461" width="68" height="6" rx="3" opacity=".65"/>
+        <rect x="858" y="461" width="68" height="6" rx="3" opacity=".65"/>
+        <rect x="934" y="461" width="68" height="6" rx="3" opacity=".65"/>
+        <rect x="1010" y="461" width="68" height="6" rx="3" opacity=".65"/>
+        <rect x="1086" y="461" width="68" height="6" rx="3" opacity=".65"/>
+        <rect x="1162" y="461" width="68" height="6" rx="3" opacity=".65"/>
+        <rect x="1238" y="461" width="88" height="6" rx="3" fill="#65B4FF"/>
+      </g>
+    </g>
+  </g>
+  <rect x="744.75" y="104.75" width="622.5" height="388.5" rx="23.25" stroke="#A3C5F6" stroke-opacity=".35" stroke-width="1.5"/>
+  <g transform="translate(1152 78)">
+    <rect width="188" height="43" rx="13" fill="#111B2F" stroke="#6B9BD9" stroke-opacity=".55"/>
+    <circle cx="20" cy="21.5" r="6" fill="#4BD7BA"/>
+    <text x="36" y="26" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#DAE9FF" letter-spacing=".7">PRIVATE BY DESIGN</text>
+  </g>
+  <g fill="#8CCBFF">
+    <circle cx="690" cy="147" r="2.5" opacity=".65"/><circle cx="705" cy="200" r="1.5" opacity=".6"/>
+    <circle cx="685" cy="270" r="2" opacity=".35"/><circle cx="714" cy="348" r="1.5" opacity=".5"/>
+    <circle cx="1388" cy="530" r="2" opacity=".6"/><circle cx="1328" cy="555" r="1.5" opacity=".4"/>
+  </g>
+</svg>
