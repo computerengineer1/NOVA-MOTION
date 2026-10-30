@@ -1,0 +1,58 @@
+name: Bug report
+description: Report a reproducible problem in NOVA MOTION.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve NOVA MOTION. Please remove private paths, tokens and personal data from logs before sharing them.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected to happen.
+      placeholder: A clear, concise description...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: List the steps that reliably trigger the issue.
+      placeholder: |
+        1. Open...
+        2. Choose...
+        3. Click...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area is affected?
+      options:
+        - Installer / setup
+        - Studio / generation
+        - Models
+        - My Videos / exports
+        - GPU / performance
+        - Backend / API
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Windows version, GPU model, dedicated VRAM, Python version and NOVA MOTION commit/version.
+      placeholder: Windows 11 · RTX 2050 4 GB · Python 3.13
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant error or log excerpt
+      description: Paste only the minimum relevant excerpt. Redact usernames, private folders and secrets.
+      render: text
+    validations:
+      required: false
