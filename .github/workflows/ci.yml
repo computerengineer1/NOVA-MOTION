@@ -72,7 +72,7 @@ jobs:
 
       - name: Run frontend tests
         working-directory: frontend
-        run: npm test -- --pool=threads --poolOptions.threads.singleThread --no-file-parallelism
+        run: npm test -- --no-file-parallelism
 
       - name: Build production UI
         working-directory: frontend
