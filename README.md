@@ -22,7 +22,7 @@ A Windows-first, local AI video studio powered by **ComfyUI · AnimateDiff · St
   <img src="https://img.shields.io/badge/Inference-NVIDIA%20CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="NVIDIA CUDA"/>
 </p>
 <p align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=computerengineer1.NOVA-MOTION&left_text=README%20VIEWS&left_color=111827&right_color=8B5CF6&logo=github" alt="Approximate README page views"/>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=computerengineer1.NOVA-MOTION&left_text=README%20VIEWS&left_color=%23111827&right_color=%238B5CF6&logo=github" alt="Approximate README page views"/>
   <img src="https://img.shields.io/github/issues/computerengineer1/NOVA-MOTION?style=for-the-badge&label=OPEN%20ISSUES&color=F59E0B" alt="Open issues"/>
   <img src="https://img.shields.io/github/last-commit/computerengineer1/NOVA-MOTION?style=for-the-badge&label=LATEST%20UPDATE&color=22C55E" alt="Latest commit"/>
   <img src="https://img.shields.io/github/commit-activity/y/computerengineer1/NOVA-MOTION?style=for-the-badge&label=COMMITS%20%2F%20YEAR&color=06B6D4" alt="Commit activity over the past year"/>
