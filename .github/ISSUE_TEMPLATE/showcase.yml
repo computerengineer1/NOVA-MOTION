@@ -1,7 +1,6 @@
 name: Share a NOVA MOTION creation
 description: Show the community what you made with the local video studio.
 title: "[Showcase]: "
-labels: ["showcase"]
 body:
   - type: markdown
     attributes:
