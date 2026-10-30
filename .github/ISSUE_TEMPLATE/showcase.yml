@@ -1,0 +1,38 @@
+name: Share a NOVA MOTION creation
+description: Show the community what you made with the local video studio.
+title: "[Showcase]: "
+labels: ["showcase"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We would love to see what you create. Share only media and prompts that you have permission to publish. Do not include private logs or personal information.
+  - type: input
+    id: title
+    attributes:
+      label: Project / video title
+      placeholder: A short name for your creation
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Tell us about it
+      description: What did you create, and which NOVA MOTION workflow did you use?
+    validations:
+      required: true
+  - type: input
+    id: media
+    attributes:
+      label: Public video or image link (optional)
+      description: Use a link you are comfortable sharing publicly.
+      placeholder: https://...
+    validations:
+      required: false
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Prompt or settings (optional)
+      description: Share a non-sensitive prompt, model profile or settings.
+    validations:
+      required: false
