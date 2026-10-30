@@ -99,8 +99,8 @@ def render_frame(frame_index: int) -> Image.Image:
     d.ellipse((cx - 54, cy - 54, cx + 54, cy + 54),
               outline=(36, 213, 240, 190), width=2)
     d.arc((cx - 70, cy - 70, cx + 70, cy + 70),
-          start=math.degrees(phase) % 360,
-          end=(math.degrees(phase) + 220) % 360,
+          start=math.degrees(phase),
+          end=math.degrees(phase) + 220,
           fill=(205, 193, 255, 245), width=5)
 
     for index, radius in enumerate((85, 54, 118)):
