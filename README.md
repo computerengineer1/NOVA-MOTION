@@ -26,6 +26,7 @@ A Windows-first, local AI video studio powered by **ComfyUI · AnimateDiff · St
   <img src="https://img.shields.io/github/issues/computerengineer1/NOVA-MOTION?style=for-the-badge&label=OPEN%20ISSUES&color=F59E0B" alt="Open issues"/>
   <img src="https://img.shields.io/github/last-commit/computerengineer1/NOVA-MOTION?style=for-the-badge&label=LATEST%20UPDATE&color=22C55E" alt="Latest commit"/>
   <img src="https://img.shields.io/github/commit-activity/y/computerengineer1/NOVA-MOTION?style=for-the-badge&label=COMMITS%20%2F%20YEAR&color=06B6D4" alt="Commit activity over the past year"/>
+  <img src="https://img.shields.io/github/actions/workflow/status/computerengineer1/NOVA-MOTION/readme-motion.yml?branch=main&style=for-the-badge&label=README%20MOTION" alt="Animated README banner workflow"/>
 </p>
 
 [Quick start](#-get-started) · [Features](#-what-you-get) · [Architecture](#-how-it-works) · [Compatibility](#-hardware--realistic-expectations) · [Docs](#-documentation)
