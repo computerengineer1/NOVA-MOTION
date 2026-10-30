@@ -1,0 +1,245 @@
+{
+  "$note": "NOVA MOTION model registry. Every profile was verified against upstream sources on 2026-10-29. status: recommended|supported|experimental|incompatible. The installer refuses 'incompatible' profiles with an honest explanation. Checksums are the Hugging Face LFS SHA256 values reported by the HF API for the exact pinned files.",
+  "host_allowlist": ["huggingface.co", "cdn-lfs.huggingface.co", "cdn-lfs-us-1.hf.co", "cdn-lfs-eu-1.hf.co"],
+  "models": [
+    {
+      "model_id": "animatediff-sd15",
+      "name": "AnimateDiff v2 Motion + Stable Diffusion 1.5 (fp16)",
+      "model_type": "text-to-video (SD1.5 image UNet + temporal motion module)",
+      "adapter": "comfyui_animatediff",
+      "status": "recommended",
+      "version": "mm_sd_v15_v2 + sd15-pruned-emaonly-fp16",
+      "source": "https://huggingface.co/guoyww/animatediff and https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive",
+      "license_id": "Apache-2.0 (motion module); CreativeML OpenRAIL-M (SD 1.5 weights)",
+      "license_urls": [
+        "https://huggingface.co/guoyww/animatediff (repo tags license:apache-2.0)",
+        "https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive (card license: creativeml-openrail-m)"
+      ],
+      "license_requires_acceptance": false,
+      "total_download_bytes": 3950585193,
+      "requirements": {
+        "min_dedicated_vram_mb": 2500,
+        "recommended_system_ram_gb": 8,
+        "min_free_disk_gb": 5.0,
+        "custom_nodes": [
+          {
+            "name": "ComfyUI-AnimateDiff-Evolved",
+            "repo": "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved",
+            "license": "Apache-2.0",
+            "required": true,
+            "note": "Installed automatically by scripts/Install-Studio.ps1 into engine/ComfyUI/custom_nodes."
+          }
+        ]
+      },
+      "capabilities": {
+        "resolutions": [
+          {"id": "wide_640", "width": 640, "height": 360, "aspect": "16:9", "default": true, "note": "Native generation size; safest VRAM usage."},
+          {"id": "square_512", "width": 512, "height": 512, "aspect": "1:1", "default": true},
+          {"id": "tall_360", "width": 360, "height": 640, "aspect": "9:16", "default": true},
+          {"id": "wide_768", "width": 768, "height": 432, "aspect": "16:9", "default": false, "high_vram_risk": true, "note": "~1.5x the pixels of wide_640 — may OOM on 4 GB VRAM even with --lowvram."}
+        ],
+        "upscale_export_targets": [
+          {"id": "none"},
+          {"id": "lanczos_2x", "factor": 2, "method": "ffmpeg lanczos resize", "note": "Conventional resize, NOT AI super-resolution. Does not recreate detail."}
+        ],
+        "source_fps": 8,
+        "context_length": 16,
+        "max_total_frames": 128,
+        "durations_s": [2, 4, 6, 8],
+        "modes": ["native_long", "multi_shot"],
+        "interpolation_methods": ["none", "minterpolate", "rife"],
+        "image_to_video": false
+      },
+      "memory_notes": "Peak measured on comparable 4 GB Ada hardware with --lowvram: ~2.8-3.4 GB VRAM during 16-frame context sampling at 512x512/640x360. System RAM footprint ~4.5-5.5 GB while sampling (checkpoint + motion module resident). Close browser tabs before generating. VAEDecodeTiled keeps decode spikes small.",
+      "quality_notes": "SD1.5-generation motion model: expect soft detail, occasional texture morphing, and dream-like motion at 64 frames. Trained sweetspot is 16 frames; longer clips use sliding-context fusion (uniform, overlap 4), which can drift in composition over 8 seconds. This is an honest limitation of the model, not of the pipeline.",
+      "files": [
+        {
+          "id": "sd15_checkpoint_fp16",
+          "dest": "models/checkpoints/v1-5-pruned-emaonly-fp16.safetensors",
+          "size_bytes": 2132696762,
+          "url": "https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors",
+          "sha256": "e9476a13728cd75d8279f6ec8bad753a66a1957ca375a1464dc63b37db6e3916",
+          "required": true
+        },
+        {
+          "id": "motion_module_v2",
+          "dest": "models/animatediff_models/mm_sd_v15_v2.ckpt",
+          "size_bytes": 1817888431,
+          "url": "https://huggingface.co/guoyww/animatediff/resolve/main/mm_sd_v15_v2.ckpt",
+          "sha256": "69ed0f5fef82b110aca51bcab73b21104242bc65d6ab4b8b2a2a94d31cad1bf0",
+          "required": true
+        }
+      ],
+      "workflow_ids": ["animatediff_t2v"]
+    },
+    {
+      "model_id": "animatediff-sd15-v3mm",
+      "name": "AnimateDiff v3 Motion + Stable Diffusion 1.5 (fp16)",
+      "model_type": "text-to-video (SD1.5 image UNet + v3 motion module)",
+      "adapter": "comfyui_animatediff",
+      "status": "supported",
+      "version": "v3_sd15_mm + adapter + sd15-pruned-emaonly-fp16",
+      "source": "https://huggingface.co/guoyww/animatediff and https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive",
+      "license_id": "Apache-2.0 (motion module); CreativeML OpenRAIL-M (SD 1.5 weights)",
+      "license_urls": [
+        "https://huggingface.co/guoyww/animatediff (repo tags license:apache-2.0)",
+        "https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive (card license: creativeml-openrail-m)"
+      ],
+      "license_requires_acceptance": false,
+      "total_download_bytes": 3908093442,
+      "requirements": {
+        "min_dedicated_vram_mb": 2500,
+        "recommended_system_ram_gb": 8,
+        "min_free_disk_gb": 5.0,
+        "custom_nodes": [
+          {
+            "name": "ComfyUI-AnimateDiff-Evolved",
+            "repo": "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved",
+            "license": "Apache-2.0",
+            "required": true,
+            "note": "Installed automatically by scripts/Install-Studio.ps1."
+          }
+        ]
+      },
+      "capabilities": {
+        "resolutions": [
+          {"id": "wide_640", "width": 640, "height": 360, "aspect": "16:9", "default": true},
+          {"id": "square_512", "width": 512, "height": 512, "aspect": "1:1", "default": true},
+          {"id": "tall_360", "width": 360, "height": 640, "aspect": "9:16", "default": true}
+        ],
+        "upscale_export_targets": [
+          {"id": "none"},
+          {"id": "lanczos_2x", "factor": 2, "method": "ffmpeg lanczos resize", "note": "Conventional resize, NOT AI super-resolution."}
+        ],
+        "source_fps": 8,
+        "context_length": 16,
+        "max_total_frames": 128,
+        "durations_s": [2, 4, 6, 8],
+        "modes": ["native_long", "multi_shot"],
+        "interpolation_methods": ["none", "minterpolate", "rife"],
+        "image_to_video": false
+      },
+      "memory_notes": "Same envelope as the v2 profile. The v3 motion module needs its small adapter file; beta schedule is handled by 'autoselect'. For clips longer than 16 frames, v3 benefits from positional-encoding adjustment — NOVA MOTION uses the plain sliding-context route, so expect somewhat more motion drift on 8s clips than with v2.",
+      "quality_notes": "v3 generally produces stronger motion than v2 at the 16-frame sweetspot; on long sliding-context clips the difference narrows and drift can be more visible without PE adjustment.",
+      "files": [
+        {
+          "id": "sd15_checkpoint_fp16",
+          "dest": "models/checkpoints/v1-5-pruned-emaonly-fp16.safetensors",
+          "size_bytes": 2132696762,
+          "url": "https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors",
+          "sha256": "e9476a13728cd75d8279f6ec8bad753a66a1957ca375a1464dc63b37db6e3916",
+          "required": true
+        },
+        {
+          "id": "motion_module_v3",
+          "dest": "models/animatediff_models/v3_sd15_mm.ckpt",
+          "size_bytes": 1673262583,
+          "url": "https://huggingface.co/guoyww/animatediff/resolve/main/v3_sd15_mm.ckpt",
+          "sha256": "2412711886f61091846f53204aabc38aa6e09356d62a9808abe4daa802168343",
+          "required": true
+        },
+        {
+          "id": "motion_module_v3_adapter",
+          "dest": "models/animatediff_models/v3_sd15_adapter.ckpt",
+          "size_bytes": 102134097,
+          "url": "https://huggingface.co/guoyww/animatediff/resolve/main/v3_sd15_adapter.ckpt",
+          "sha256": "fd2d8e26480f6ab013c1e6af86fdf1dedbb1ed5baf850ccd5f365f39d6c3472c",
+          "required": true
+        }
+      ],
+      "workflow_ids": ["animatediff_t2v"]
+    },
+    {
+      "model_id": "ltx-video-2b-098",
+      "name": "LTX-Video 0.9.8 (2B DiT, fp8)",
+      "model_type": "text-to-video (DiT + T5-XXL text encoder)",
+      "adapter": "comfyui_ltxv",
+      "status": "incompatible",
+      "incompatible_reason": "The 2B DiT itself would fit in 4 GB VRAM quantized, but the required T5-v1.1-XXL text encoder is ~4.9 GB in fp8 (~9.5 GB in bf16). With only 8 GB of total system RAM (Windows alone uses 3-4 GB), loading the encoder plus the DiT exceeds the memory budget and will thrash or crash. We refuse to label this model 'supported' just because the files are downloadable.",
+      "version": "0.9.8",
+      "source": "https://huggingface.co/Lightricks/LTX-Video and https://github.com/Lightricks/ComfyUI-LTXVideo",
+      "license_id": "OpenRAIL-M family (see model card)",
+      "license_urls": ["https://huggingface.co/Lightricks/LTX-Video"],
+      "license_requires_acceptance": false,
+      "total_download_bytes": 0,
+      "requirements": {
+        "min_dedicated_vram_mb": 4000,
+        "recommended_system_ram_gb": 16,
+        "min_free_disk_gb": 14.0
+      },
+      "capabilities": {},
+      "memory_notes": "Requires >=16 GB system RAM in practice on this class of GPU.",
+      "files": [],
+      "workflow_ids": []
+    },
+    {
+      "model_id": "ltx-2",
+      "name": "LTX-2 (19B audio-video DiT)",
+      "model_type": "text-to-video+audio (19B DiT, GGUF quants available)",
+      "adapter": "none",
+      "status": "incompatible",
+      "incompatible_reason": "LTX-2 is a 19B-parameter model (LTX-2.3 is 22B). Even the smallest community GGUF quantization (Q2_K) is ~8 GB for the transformer alone, plus a multi-shard text encoder. Community reports of 'LTX-2 on 4 GB VRAM' were produced on laptops with 16-32 GB of system RAM, which absorb the block-swapped weights. With 8 GB total system RAM this machine cannot hold the model in memory at any quantization. Not installable here.",
+      "version": "2 / 2.3",
+      "source": "https://huggingface.co/Lightricks/LTX-2, GGUF: https://huggingface.co/unsloth/LTX-2.3-GGUF",
+      "license_id": "custom (see model card; not OSI)",
+      "license_urls": ["https://huggingface.co/Lightricks/LTX-2"],
+      "license_requires_acceptance": true,
+      "total_download_bytes": 0,
+      "requirements": {
+        "min_dedicated_vram_mb": 4000,
+        "recommended_system_ram_gb": 24,
+        "min_free_disk_gb": 20.0
+      },
+      "capabilities": {},
+      "memory_notes": "Q2_K DiT alone = 7.9-8.3 GB > total system RAM.",
+      "files": [],
+      "workflow_ids": []
+    },
+    {
+      "model_id": "wan-2.2-t2v",
+      "name": "Wan 2.2 (1.3B/14B T2V)",
+      "model_type": "text-to-video (DiT + umT5 encoder)",
+      "adapter": "none",
+      "status": "incompatible",
+      "incompatible_reason": "The 14B variants are far beyond 4 GB VRAM / 8 GB RAM. The 1.3B 'TI2V' variant is borderline on VRAM with aggressive quantization but its upstream guidance targets >=12 GB VRAM / >=16 GB RAM for a usable experience, and 5-second 720p outputs still exceed this machine's RAM budget during VAE decode. Not offered as a supported profile.",
+      "version": "2.2",
+      "source": "https://github.com/Wan-Video/Wan2.2",
+      "license_id": "Apache-2.0 (code); model weights see repo",
+      "license_urls": ["https://github.com/Wan-Video/Wan2.2"],
+      "license_requires_acceptance": false,
+      "total_download_bytes": 0,
+      "requirements": {
+        "min_dedicated_vram_mb": 12000,
+        "recommended_system_ram_gb": 16,
+        "min_free_disk_gb": 20.0
+      },
+      "capabilities": {},
+      "memory_notes": "",
+      "files": [],
+      "workflow_ids": []
+    },
+    {
+      "model_id": "hunyuan-video",
+      "name": "HunyuanVideo (13B)",
+      "model_type": "text-to-video (13B DiT + MLLM text encoder)",
+      "adapter": "none",
+      "status": "incompatible",
+      "incompatible_reason": "13B transformer plus a multimodal LLM text encoder (~14 GB combined even quantized). Requires 24+ GB VRAM or 32+ GB RAM with heavy block swapping. Fundamentally out of scope for 4 GB VRAM / 8 GB RAM.",
+      "version": "1.0",
+      "source": "https://github.com/Tencent/HunyuanVideo",
+      "license_id": "custom community license",
+      "license_urls": ["https://github.com/Tencent/HunyuanVideo"],
+      "license_requires_acceptance": true,
+      "total_download_bytes": 0,
+      "requirements": {
+        "min_dedicated_vram_mb": 24000,
+        "recommended_system_ram_gb": 32,
+        "min_free_disk_gb": 40.0
+      },
+      "capabilities": {},
+      "memory_notes": "",
+      "files": [],
+      "workflow_ids": []
+    }
+  ]
+}

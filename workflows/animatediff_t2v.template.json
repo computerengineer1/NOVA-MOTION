@@ -1,0 +1,14 @@
+{
+  "1": {"class_type": "CheckpointLoaderSimple", "inputs": {"ckpt_name": "v1-5-pruned-emaonly-fp16.safetensors"}},
+  "2": {"class_type": "CLIPTextEncode", "inputs": {"text": "{{POSITIVE_PROMPT}}", "clip": ["1", 1]}},
+  "3": {"class_type": "CLIPTextEncode", "inputs": {"text": "{{NEGATIVE_PROMPT}}", "clip": ["1", 1]}},
+  "4": {"class_type": "ADE_LoadAnimateDiffModel", "inputs": {"model_name": "{{MOTION_MODEL}}"}},
+  "5": {"class_type": "ADE_ApplyAnimateDiffModelSimple", "inputs": {"motion_model": ["4", 0]}},
+  "6": {"class_type": "ADE_StandardUniformContextOptions", "inputs": {"context_length": 16, "context_stride": 1, "context_overlap": 4, "fuse_method": "pyramid", "use_on_equal_length": false, "start_percent": 0.0, "guarantee_steps": 1}},
+  "7": {"class_type": "ADE_AnimateDiffSamplingSettings", "inputs": {"batch_offset": 0, "noise_type": "FreeNoise", "seed_gen": "comfy", "seed_offset": 0, "seed_override": "{{SEED}}", "adapt_denoise_steps": false}},
+  "8": {"class_type": "ADE_UseEvolvedSampling", "inputs": {"model": ["1", 0], "beta_schedule": "autoselect", "m_models": ["5", 0], "context_options": ["6", 0], "sample_settings": ["7", 0]}},
+  "9": {"class_type": "EmptyLatentImage", "inputs": {"width": "{{WIDTH}}", "height": "{{HEIGHT}}", "batch_size": "{{FRAMES}}"}},
+  "10": {"class_type": "KSampler", "inputs": {"model": ["8", 0], "seed": "{{SEED}}", "steps": "{{STEPS}}", "cfg": "{{CFG}}", "sampler_name": "{{SAMPLER}}", "scheduler": "{{SCHEDULER}}", "positive": ["2", 0], "negative": ["3", 0], "latent_image": ["9", 0], "denoise": 1.0}},
+  "11": {"class_type": "VAEDecodeTiled", "inputs": {"samples": ["10", 0], "vae": ["1", 2], "tile_size": 512, "overlap": 64, "temporal_size": 64, "temporal_overlap": 8}},
+  "12": {"class_type": "SaveImage", "inputs": {"images": ["11", 0], "filename_prefix": "{{FILENAME_PREFIX}}"}}
+}

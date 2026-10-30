@@ -1,0 +1,47 @@
+# Never commit weights, engines, venvs, outputs or caches
+engine/
+tools/
+data/
+logs/
+outputs/
+thumbnails/
+
+# Model weights & binary artifacts
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+*/.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node & Build artifacts
+node_modules/
+dist/
+frontend/dist/
+*.tsbuildinfo
+*.local
+
+# Logs
+*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Environment files
+.env
+.env.*
+!.env.example
