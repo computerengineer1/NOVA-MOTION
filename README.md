@@ -108,7 +108,7 @@ On the 4 GB RTX 2050 reference machine, 640×360 is the intended conservative ro
 - NVIDIA GPU and a recent driver compatible with the CUDA-enabled PyTorch wheels used by the installer.
 - Internet access for the initial setup and model download.
 - Approximately 15 GB or more of free disk space is a sensible starting point; the exact requirement depends on dependencies, selected models and generated videos.
-- Node.js 20.19+ or 22.12+ only if you need to build the frontend yourself. A prebuilt <code>frontend/dist</code> can be used instead.
+- Node.js 22.22.2+ or 24.15.0+ (24 LTS recommended) only if you need to build the frontend or run its tests yourself. A prebuilt <code>frontend/dist</code> can be used instead.
 
 ### 2. Install
 
